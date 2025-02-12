@@ -23,7 +23,7 @@
           {
             "component": "sku",
             "name": "sku",
-            "label": "Alt Text",
+            "label": "Product SKU",
             "valueType": "string"
           }
         ]
