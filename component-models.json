@@ -194,5 +194,16 @@
   {
     "id": "product-recommendations",
     "fields": []
+  },
+  {
+    "id": "product-teaser",
+    "fields": [
+      {
+        "component": "sku",
+        "name": "sku",
+        "label": "Product SKU",
+        "valueType": "string"
+      }
+    ]
   }
 ]
