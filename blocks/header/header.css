@@ -6,7 +6,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 3;
   position: fixed;
-  border-bottom: 1px solid var(--color-neutral-300);
+  box-shadow: 0px 3px 5px #0000000D;
 }
 
 header nav {
@@ -493,4 +493,36 @@ header .nav-search-input .search_autocomplete .popover-container {
 .grecaptcha-badge {
   margin-top: 20px;
   z-index: 3;
+}
+
+
+header .announcement-wrapper {
+  display:none;
+  background-color: #A33532;
+  min-height: 30px;
+  @media (width >= 900px) {
+    display: block;
+  }
+}
+
+header .announcement-wrapper p {
+  max-width: 1360px;
+  margin: auto;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.96px;
+  text-align: left;
+  padding: 7px 0px;
+  text-transform: uppercase;
+}
+
+.icon-frescopa_logo {
+  width: 75%;
+  height: 75%;
+
+  @media (width >= 900px) {
+    width: 100%;
+    height: 100%;
+  }
 }
