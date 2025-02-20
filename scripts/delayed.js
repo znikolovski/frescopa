@@ -2,6 +2,7 @@
 import { getConfigValue } from './configs.js';
 import { getUserTokenCookie } from './initializers/index.js';
 import { getConsent } from './scripts.js';
+import { loadScript } from './aem.js';
 
 async function initAnalytics() {
   // Load Commerce events SDK and collector
