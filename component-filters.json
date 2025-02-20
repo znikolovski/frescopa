@@ -20,7 +20,9 @@
       "offer",
       "storelocator",
       "product-recommendations",
-      "product-teaser"
+      "product-teaser",
+      "product-list-page",
+      "product-details"
     ]
   },
   {
