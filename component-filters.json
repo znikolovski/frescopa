@@ -17,6 +17,8 @@
       "columns",
       "teaser",
       "fragment",
+      "offer",
+      "storelocator",
       "product-recommendations",
       "product-teaser"
     ]
