@@ -1,4 +1,4 @@
-import { h, render, Component } from '../../scripts/preact.js';
+import { h, render, Component } from '../../scripts/__dropins__/tools/preact.js';
 import htm from '../../scripts/htm.js';
 const html = htm.bind(h);
 const GOOGLE_MAP_KEY='AIzaSyB4er8NcF-CGHY4ELZbqMlqzAkgsyt798g';
