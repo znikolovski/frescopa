@@ -169,11 +169,10 @@ html {
 }
 
 body {
-  font: var(--type-body-1-default-font);
-  letter-spacing: var(--type-body-1-default-letter-spacing);
+  font: normal normal normal 18px/24px Roboto, sans-serif;
   margin: 0;
-  color: var(--color-brand-700);
-  background-color: var(--background-color);
+  color: #58181D;
+  background-color:#fff;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
@@ -229,7 +228,7 @@ h2 {
 }
 
 h3 {
-  font: var(--type-display-3-font);
+  font: normal normal normal 36px/42px Baskerville;
   letter-spacing: var(--type-display-3-letter-spacing);
 }
 
@@ -326,7 +325,7 @@ button.button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--color-brand-500);
+  background-color: #00647D;
   color: var(--color-neutral-50);
   cursor: pointer;
   overflow: hidden;
@@ -338,7 +337,7 @@ main a.button:hover,
 main a.button:focus,
 button.button:hover,
 button.button:focus {
-  background-color: var(--color-brand-600);
+  background-color: #00647D;
   cursor: pointer;
 }
 
@@ -351,9 +350,9 @@ button.button:disabled:hover {
 
 main a.button.secondary,
 button.button.secondary {
-  background-color: unset;
-  border: var(--shape-border-width-3) solid currentcolor;
-  color: var(--color-brand-500);
+  background-color: #DC6E52;
+  border: #DC6E52 solid;
+  color: #fff;
 }
 
 main a.button.secondary:hover,
