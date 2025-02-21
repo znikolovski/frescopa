@@ -3,8 +3,8 @@ export async function initMap() {
 const { Map } = await google.maps.importLibrary('maps');
 
 const map = new Map(document.getElementById('locator-map'), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+    center: { lat: 36.121, lng: -115.170 },
+    zoom: 17,
     disableDefaultUI: true,
     keyboardShortcuts: false,
     styles: [
