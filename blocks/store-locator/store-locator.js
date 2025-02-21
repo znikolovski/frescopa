@@ -42,7 +42,7 @@ export default function decorate(block) {
     <div class="search">
       <p class="search__title">Find another location</p>
       <div class="search__box">
-        <input class="search__input" type="text" placeholder="Post Code" name="search"></input>
+        <input class="search__input" type="text" placeholder="Zip Code" name="search"></input>
         <button class="search__button">Search</button>
       </div>
     </div>
