@@ -2,6 +2,7 @@
 import { getConfigValue } from './configs.js';
 import { getUserTokenCookie } from './initializers/index.js';
 import { getConsent } from './scripts.js';
+import { loadScript } from './aem.js';
 
 async function initAnalytics() {
   // Load Commerce events SDK and collector
@@ -49,3 +50,8 @@ if (document.prerendering) {
 }
 
 // add delayed functionality here
+// add more delayed functionality here
+const map = document.querySelector('#locator-map');
+if (map) {
+  loadScript('/blocks/store-locator/location-init.js', { defer: true });
+}
