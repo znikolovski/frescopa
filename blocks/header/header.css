@@ -506,8 +506,8 @@ header .announcement-wrapper {
 }
 
 header .announcement-wrapper p {
-  max-width: 1360px;
-  margin: auto;
+
+
   color: #fff;
   font-size: 12px;
   font-weight: 500;
@@ -515,6 +515,13 @@ header .announcement-wrapper p {
   text-align: left;
   padding: 7px 0px;
   text-transform: uppercase;
+}
+
+header .announcement-wrapper .default-content-wrapper {
+  max-width: 1360px;
+  margin: auto;
+  display: flex;
+  justify-content:space-between;
 }
 
 .icon-frescopa_logo {
