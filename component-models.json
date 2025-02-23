@@ -112,6 +112,14 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Numbered Features",
+            "value": "numbered"
+          },
+          {
+            "name": "Background Color",
+            "value": "background"
           }
         ]
       }
@@ -247,6 +255,26 @@
           {
             "name": "Background Color",
             "children": [
+              {
+                "name": "Frescopa Red",
+                "value": "frescopa-background-red"
+              },
+              {
+                "name": "Frescopa Yellow",
+                "value": "frescopa-background-yellow"
+              },
+              {
+                "name": "Frescopa Blue",
+                "value": "frescopa-background-blue"
+              },
+              {
+                "name": "Frescopa Beige",
+                "value": "frescopa-background-beige"
+              },
+              {
+                "name": "Frescopa Black",
+                "value": "frescopa-background-black"
+              },
               {
                 "name": "Grey",
                 "value": "bg-spectrum-gray-700"

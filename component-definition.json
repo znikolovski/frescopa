@@ -199,7 +199,7 @@
                   "model": "teaser",
                   "title": "Teaser Title",
                   "titleType": "h3",
-                  "longDescr": "<p>Teaser Description</p>",
+                  "longDescr": "",
                   "classes": ["light", "left"]
                 }
               }
