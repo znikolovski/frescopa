@@ -8,7 +8,6 @@
 }
 
 .cards > ul > li {
-  border: 1px solid var(--color-neutral-500);
   background-color: var(--background-color);
 }
 
@@ -24,4 +23,58 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.numbered > .cards-wrapper {
+  padding: 90px;
+  box-sizing: border-box;
+}
+
+.numbered > .cards-wrapper ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.numbered > .cards-wrapper ul > li {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.numbered > .cards-wrapper ul > li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.numbered .cards-card-image {
+  border-radius: 20px;
+  overflow: hidden;
+
+
+}
+
+.numbered .cards-card-body {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.numbered .cards-card-body::before {
+  content: '1';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: normal normal normal 400px/400px Baskerville;
+  color: rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+}
+
+
+.numbered .cards-card-body h3 {
+  font-size: 48px
+}
+
+.numbered .cards-card-body p {
+  font-size: 18px
 }
