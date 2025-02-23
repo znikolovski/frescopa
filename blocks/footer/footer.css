@@ -41,6 +41,7 @@ footer p,li {
 
 .footer li a {
   font-size: 13px;
+  font-weight: 300;
   text-decoration: none;
   color: var(--frescopa--color-text);
 }
