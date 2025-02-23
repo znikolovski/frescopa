@@ -8,14 +8,17 @@
     display: flex;
     padding: 70px 40px;;
     background-color: unset;
-    max-width: 483px;
-
+    max-width: 515px;
 
   }
 
   @media (width >= 900px) {
     .teaser.block > .foreground {
-      padding: 139px 87px 0 87px;
+      padding: 10px 87px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
     }
   }
 
@@ -65,7 +68,6 @@
     order: 0;
     }
 
-      
  /* the background image container */
   .teaser.block > .background {
     display:inline-block;
@@ -77,6 +79,10 @@
     width: auto;
     object-fit: cover;
     height: revert-layer;
+  }
+
+  .teaser.block .long-description {
+    color: #FFF;
   }
 
   @media (width >= 900px) {
