@@ -4,7 +4,7 @@ import { getAEMPublish, getAEMAuthor } from '../../scripts/endpointconfig.js';
 export default async function decorate(block) {
   const aempublishurl = getAEMPublish();
   const aemauthorurl = getAEMAuthor();
-  const persistedquery = '/graphql/execute.json/securbank/OfferByPath';
+  const persistedquery = '/graphql/execute.json/frescopa/OfferByPath';
   const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
   let variationname = block.querySelector(':scope div:nth-child(2) > div').innerHTML.trim();
   if (!variationname) {
@@ -35,7 +35,7 @@ export default async function decorate(block) {
           <p data-aue-prop="detail" data-aue-label="detail" data-aue-type="richtext" class='detail'>${cfReq.detail.plaintext}</p>
       </div>
       <div class='offer-right'>
-         <a href="#" data-aue-prop="callToAction" data-aue-label="Call to Action" data-aue-type="text" class='button secondary'>${cfReq.callToAction}</a>
+         <a href="${cfReq.ctaUrl}" data-aue-prop="callToAction" data-aue-label="Call to Action" data-aue-type="text" class='button secondary'>${cfReq.callToAction}</a>
       </div>
   </div>
 `;
