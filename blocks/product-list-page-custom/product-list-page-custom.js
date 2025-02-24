@@ -536,12 +536,6 @@ class ProductListPage extends Component {
     const { type = 'category' } = props;
 
     return html`<${Fragment}>
-    <${FacetList} 
-      facets=${state.facets}
-      filters=${state.filters}
-      facetMenuRef=${this.facetMenuRef}
-      onFilterChange=${this.handleFilterChange.bind(this)}
-      loading=${state.loading} />
     <div class="products">
       <div class="title">
         <h1>${state.category.name}</h1>
