@@ -41,9 +41,9 @@ class ProductCard extends Component {
     url.search = '';
 
     return html`<picture>
-      <source type="image/webp" srcset="${url}" media="(max-width: 900px)" />
-      <source type="image/webp" srcset="${url}" />
-      <img class="product-image-photo" src="${url} alt=${product.name} loading=${loading} />
+      <source type="image/webp" srcset="${url}?width=163&bg-color=255,255,255&format=webply&optimize=medium 1x,${url}?width=326&bg-color=255,255,255&format=webply&optimize=medium 2x, ${url}?width=489&bg-color=255,255,255&format=webply&optimize=medium 3x" media="(max-width: 900px)" />
+      <source type="image/webp" srcset="${url}?width=330&bg-color=255,255,255&format=webply&optimize=medium 1x, ${url}?width=660&bg-color=255,255,255&format=webply&optimize=medium 2x, ${url}?width=990&bg-color=255,255,255&format=webply&optimize=medium 3x" />
+      <img class="product-image-photo" src="${url}?width=330&quality=100&bg-color=255,255,255" max-width="330" max-height="396" alt=${product.name} loading=${loading} />
     </picture>`;
   }
 
