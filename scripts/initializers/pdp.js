@@ -70,7 +70,7 @@ await initializeDropin(async () => {
 })();
 
 async function preloadImageMiddleware(data) {
-  const image = data?.images?.[0]?.url?.replace(/^https?:/, '');
+  const image = data?.images?.[0]?.url;
 
   if (image) {
     await UI.render(Image, {
