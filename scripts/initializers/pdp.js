@@ -75,7 +75,6 @@ async function preloadImageMiddleware(data) {
   if (image) {
     await UI.render(Image, {
       src: image,
-      ...IMAGES_SIZES.mobile,
       loading: 'eager',
     })(document.createElement('div'));
   }
