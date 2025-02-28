@@ -122,9 +122,14 @@
             "value": "background"
           },
           {
+            "name": "Card Tiles",
+            "value": "card-tiles"
+          },
+          {
             "name": "Home",
             "value": "home"
           }
+
         ]
       }
     ]
