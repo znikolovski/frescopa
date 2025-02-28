@@ -37,7 +37,7 @@ header nav[aria-expanded='true'] {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
+    gap: 0 36px;
     max-width: 1360px;
     padding: 0;
   }
@@ -221,7 +221,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 36px;
     margin: 0;
   }
 
