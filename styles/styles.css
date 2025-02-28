@@ -242,8 +242,9 @@ h3 {
 }
 
 h4 {
-  font: var(--type-headline-1-font);
-  letter-spacing: var(--type-headline-1-letter-spacing);
+  font: normal normal normal 32px/32px Baskerville;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
 }
 
 h5 {
@@ -254,6 +255,11 @@ h5 {
 h6 {
   font: var(--type-headline-2-default-font);
   letter-spacing: var(--type-headline-2-default-letter-spacing);
+}
+
+p {
+  font: normal normal normal 18px/24px Roboto;
+  letter-spacing: 0px;
 }
 
 p,
