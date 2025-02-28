@@ -8,6 +8,7 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 .product-list-page-custom {
   display: flex !important;
   gap: 2rem;
+  margin: 40px 0;
 }
 
 .product-list-page-custom .facets {
@@ -396,8 +397,8 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 
 .product-list-page-custom .products .list > ol > li .picture picture {
   display: block;
-  width: 80%;
-  height: 80%;
+  width: 75%;
+  height: 75%;
   margin-left: auto;
   margin-right: auto;
   grid-area: 1 / 1 / 1 / 1;
