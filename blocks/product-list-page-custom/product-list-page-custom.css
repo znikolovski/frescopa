@@ -381,7 +381,6 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 .product-list-page-custom .products .list > ol > li .picture {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1.2;
   position: relative;
   overflow: hidden;
 }
@@ -397,8 +396,10 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 
 .product-list-page-custom .products .list > ol > li .picture picture {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: 1 / 1 / 1 / 1;
 }
 
@@ -429,7 +430,7 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
   text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
-  height: 6.1rem;
+  margin-top: 20px;
 }
 
 .product-list-page-custom .products .list > ol > li .name a:hover {
