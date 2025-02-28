@@ -66,6 +66,10 @@ class ProductCard extends Component {
           <div class="shimmer shimmer-text"></div>
           <div class="shimmer shimmer-text" style="max-width: 70%"></div>
         </div>
+        <div class="description">
+          <div class="shimmer shimmer-text"></div>
+          <div class="shimmer shimmer-text" style="max-width: 70%"></div>
+        </div>
         <div class="price">
           <div class="shimmer shimmer-text" style="max-width: 30%"></div>
         </div>
