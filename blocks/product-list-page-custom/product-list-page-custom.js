@@ -72,6 +72,7 @@ export const productSearchQuery = (addCategory = false) => `query ProductSearch(
           productView {
               name
               sku
+              description
               urlKey
               images(roles: "thumbnail") {
                 url
