@@ -248,8 +248,8 @@ h4 {
 }
 
 h5 {
-  font: var(--type-headline-2-strong-font);
-  letter-spacing: var(--type-headline-2-strong-letter-spacing);
+  font: normal normal normal 24px/30px Baskerville;
+  letter-spacing: 0px
 }
 
 h6 {
@@ -532,4 +532,8 @@ main[hidden] {
 
 main > .section + .numbered {
   margin: 20px;
+}
+
+main > .section + .card-tiles > div {
+  max-width: 1200px;
 }
