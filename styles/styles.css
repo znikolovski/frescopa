@@ -153,6 +153,7 @@
   --frescopa--color-secondary: #DC6E52;
   --frescopa--color-tertiary: #EBA439;
   --frescopa--color-text: #58181D;
+  --frescopa--color-black: #2C2C2C;
 }
 
 /* fallback fonts */
@@ -505,6 +506,22 @@ main[hidden] {
 
 .frescopa-background-red {
   background-color: var(--frescopa--color-brand);
+}
+
+.frescopa-background-yellow {
+  background-color: var(--frescopa--color-tertiary);
+}
+
+.frescopa-background-blue {
+  background-color: var(--frescopa--color-primary);
+}
+
+.frescopa-background-beige {
+  background-color: var(--frescopa--color-background);
+}
+
+.frescopa-background-black {
+  background-color: var(--frescopa--color-black);
 }
 
 main > .section + .numbered {
