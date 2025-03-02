@@ -55,19 +55,10 @@ function embedVimeo(url, autoplay, background) {
 }
 
 function embedDM(url, autoplay, background) {
-    const [, video] = url.pathname.split('/');
-    let suffix = '';
-    if (background || autoplay) {
-      const suffixParams = {
-        autoplay: autoplay ? '1' : '0',
-        background: background ? '1' : '0',
-      };
-      suffix = `?${Object.entries(suffixParams).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&')}`;
-    }
-    const temp = document.createElement('div');
-    temp.innerHTML = `<video><source src="blob:https://delivery-p149891-e1546481.adobeaemcloud.com/7fb5230a-be3c-4cc9-ac60-2be044559b2c"></video>`;
-    return temp.children.item(0);
-  }
+  const temp = document.createElement('div');
+  temp.innerHTML = `<video><source src="blob:https://delivery-p149891-e1546481.adobeaemcloud.com/7fb5230a-be3c-4cc9-ac60-2be044559b2c"></video>`;
+  return temp.children.item(0);
+}
   
 function getVideoElement(source, autoplay, background) {
   const video = document.createElement('video');
