@@ -16,3 +16,4 @@ component-filters.json
 component-definition.json
 component-models.json
 blocks/**/*.json
+*.json
