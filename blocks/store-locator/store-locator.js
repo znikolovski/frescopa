@@ -3,20 +3,20 @@ export async function initMap() {
   const { Map } = await google.maps.importLibrary('maps');
 
   const map = new Map(document.getElementById('locator-map'), {
-      center: { lat: 36.121, lng: -115.170 },
-      zoom: 17,
-      disableDefaultUI: true,
-      keyboardShortcuts: false,
-      styles: [
-        {
-          featureType: 'all',
-          stylers: [
-            { lightness: -5 },
-            { saturation: -100 },
-            { visibility: 'simplified' },
-          ]
-        }
-      ]
+    center: { lat: 36.121, lng: -115.170 },
+    zoom: 17,
+    disableDefaultUI: true,
+    keyboardShortcuts: false,
+    styles: [
+      {
+        featureType: 'all',
+        stylers: [
+          { lightness: -5 },
+          { saturation: -100 },
+          { visibility: 'simplified' },
+        ]
+      }
+    ]
   });
   // eslint-disable-next-line no-undef
   const infoWindow = new google.maps.InfoWindow({
