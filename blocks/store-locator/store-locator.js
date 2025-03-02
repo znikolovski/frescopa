@@ -14,21 +14,19 @@ export async function initMap() {
           { lightness: -5 },
           { saturation: -100 },
           { visibility: 'simplified' },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   });
   // eslint-disable-next-line no-undef
-  const infoWindow = new google.maps.InfoWindow({
-    map,
-  });
+  // const infoWindow = new google.maps.InfoWindow({
+  //   map,
+  // });
 }
 
 export default function decorate(block) {
-
-  const pText = block.querySelector('p').textContent;
-  block.textContent = '';
-  
+  //const pText = block.querySelector('p').textContent;
+  block.textContent = '';  
   window.initMap = async () => {
     initMap();
   };
@@ -48,8 +46,7 @@ export default function decorate(block) {
       <div class="map" id="locator-map">
     </div>
   </div>
-  `)
+  `);
 
   block.append(locatorDOM);
-
 }
