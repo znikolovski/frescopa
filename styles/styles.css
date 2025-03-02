@@ -537,3 +537,16 @@ main > .section + .numbered {
 main > .section + .card-tiles > div {
   max-width: 1200px;
 }
+
+main > .section + .background > div {
+  background-color: var(--frescopa--color-background);
+  min-height: 300px;
+  max-width: 1360px;
+  padding: 90px 0;
+  border-radius: 12px;
+}
+
+main > .section + .background > div > * {
+  max-width: 1200px;
+  margin: auto;
+}
