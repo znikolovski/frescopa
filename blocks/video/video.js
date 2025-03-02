@@ -56,6 +56,7 @@ function embedVimeo(url, autoplay, background) {
 
 function embedDM() {
   const temp = document.createElement('div');
+  // eslint-disable-next-line quotes
   temp.innerHTML = `<video><source src='blob:https://delivery-p149891-e1546481.adobeaemcloud.com/7fb5230a-be3c-4cc9-ac60-2be044559b2c'></video>`;
   return temp.children.item(0);
 }
