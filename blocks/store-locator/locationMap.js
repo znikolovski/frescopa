@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { h, render, Component } from '../../scripts/__dropins__/tools/preact.js';
 import htm from '../../scripts/htm.js';
 const html = htm.bind(h);
