@@ -538,15 +538,16 @@ main > .section + .card-tiles > div {
   max-width: 1200px;
 }
 
-main > .section + .background > div {
+main > .section + .background {
   background-color: var(--frescopa--color-background);
-  min-height: 300px;
   max-width: 1360px;
-  padding: 90px 0;
+  padding: 60px 0 2px;
   border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-main > .section + .background > div > * {
+main > .section + .background > div {
   max-width: 1200px;
   margin: auto;
 }

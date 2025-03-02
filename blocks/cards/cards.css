@@ -139,3 +139,30 @@
 .card-tiles .cards ul li h5 {
   text-align: center;
 }
+
+
+main > .section + .background .cards ul {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+main > .section + .background .cards ul li {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 20px #0000001A;
+  border-radius: 10px;
+  opacity: 1;
+  width: 380px;
+  height: 410px;
+  padding-top: 30px;
+}
+
+main > .section + .background .cards-card-image {
+  min-width: 224px;
+}
+
+main > .section + .background .cards ul li img {
+  object-fit: contain;
+  max-height: 256px;
+}
