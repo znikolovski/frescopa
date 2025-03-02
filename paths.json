@@ -7,7 +7,8 @@
     "/content/frescopa/placeholders:/placeholders.json",
     "/content/frescopa/configs:/configs.json",
     "/content/frescopa/configs-dev:/configs-dev.json",
-    "/content/frescopa/configs-stage:/configs-stage.json"
+    "/content/frescopa/configs-stage:/configs-stage.json",
+    "/content/frescopa/locations/locationslist:/locations.json"
   ],
   "includes": [
     "/content/frescopa/"
