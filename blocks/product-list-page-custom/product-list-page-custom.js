@@ -3,7 +3,6 @@ import {
 } from '@dropins/tools/preact.js';
 import htm from '../../scripts/htm.js';
 import ProductList from './ProductList.js';
-import FacetList from './FacetList.js';
 import { readBlockConfig, sampleRUM } from '../../scripts/aem.js';
 import { priceFieldsFragment, performCatalogServiceQuery } from '../../scripts/commerce.js';
 
