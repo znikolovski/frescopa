@@ -54,6 +54,21 @@ function embedVimeo(url, autoplay, background) {
   return temp.children.item(0);
 }
 
+function embedDM(url, autoplay, background) {
+    const [, video] = url.pathname.split('/');
+    let suffix = '';
+    if (background || autoplay) {
+      const suffixParams = {
+        autoplay: autoplay ? '1' : '0',
+        background: background ? '1' : '0',
+      };
+      suffix = `?${Object.entries(suffixParams).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&')}`;
+    }
+    const temp = document.createElement('div');
+    temp.innerHTML = `<video><source src="blob:https://delivery-p149891-e1546481.adobeaemcloud.com/7fb5230a-be3c-4cc9-ac60-2be044559b2c"></video>`;
+    return temp.children.item(0);
+  }
+  
 function getVideoElement(source, autoplay, background) {
   const video = document.createElement('video');
   video.setAttribute('controls', '');
@@ -84,6 +99,8 @@ const loadVideoEmbed = (block, link, autoplay, background) => {
 
   const isYoutube = link.includes('youtube') || link.includes('youtu.be');
   const isVimeo = link.includes('vimeo');
+  const isDMOpenAPI = link.includes('adobeaemcloud.com');
+
 
   if (isYoutube) {
     const embedWrapper = embedYoutube(url, autoplay, background);
@@ -97,6 +114,10 @@ const loadVideoEmbed = (block, link, autoplay, background) => {
     embedWrapper.querySelector('iframe').addEventListener('load', () => {
       block.dataset.embedLoaded = true;
     });
+ } else if (isDMOpenAPI) {
+    const embedWrapper = embedDM(url, autoplay, background);
+    block.append(embedWrapper);
+ 
   } else {
     const videoEl = getVideoElement(link, autoplay, background);
     block.append(videoEl);
@@ -111,6 +132,7 @@ export default async function decorate(block) {
   const link = block.querySelector('a').href;
   block.textContent = '';
   block.dataset.embedLoaded = false;
+  console.log('video');
 
   const autoplay = block.classList.contains('autoplay');
   if (placeholder) {

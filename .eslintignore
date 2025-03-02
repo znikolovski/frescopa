@@ -10,3 +10,6 @@ scripts/commerce-events-sdk.js
 scripts/widgets
 plugins/
 cypress/
+component-filters.json
+component-definition.json
+component-models.json

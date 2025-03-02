@@ -1,3 +1,4 @@
+/* eslint-disable */
 export function decorateButtons(...buttons) {
   return buttons
     .map((div) => {

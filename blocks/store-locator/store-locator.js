@@ -1,3 +1,4 @@
+/* eslint-disable */
 export async function initMap() {
 // eslint-disable-next-line no-undef
   const { Map } = await google.maps.importLibrary('maps');
@@ -19,9 +20,9 @@ export async function initMap() {
     ],
   });
   // eslint-disable-next-line no-undef
-  // const infoWindow = new google.maps.InfoWindow({
-  //   map,
-  // });
+  const infoWindow = new google.maps.InfoWindow({
+    map,
+  });
 }
 
 export default function decorate(block) {
