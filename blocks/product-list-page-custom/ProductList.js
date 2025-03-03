@@ -90,6 +90,9 @@ class ProductCard extends Component {
         <div class="name">
           <a onClick=${() => this.onProductClick(product)} href="/products/${product.urlKey}/${product.sku}" dangerouslySetInnerHTML=${{__html: product.name}} />
         </div>
+        <div class="description">
+          <a onClick=${() => this.onProductClick(product)} href="/products/${product.urlKey}/${product.sku}" dangerouslySetInnerHTML=${{__html: product.description}} />
+        </div>
         <div class="price">${renderPrice(product, this.formatter.format, html, Fragment)}</div>
       </li>`;
   }
