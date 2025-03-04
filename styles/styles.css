@@ -186,6 +186,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   min-height: 100dvh;
+  counter-reset: my-card-counter;
 }
 
 body:not(.appear) {
