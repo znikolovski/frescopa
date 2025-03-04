@@ -1,3 +1,5 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+
 /* eslint-disable */
 export function decorateButtons(...buttons) {
   return buttons
@@ -15,9 +17,15 @@ export function decorateButtons(...buttons) {
 }
 
 export function generateTeaserDOM(props, classes) {
-// Extract properties, always same order as in model, empty string if not set
+  // Extract properties, always same order as in model, empty string if not set
   const [pictureContainer, eyebrow, title, longDescr, shortDescr, firstCta, secondCta] = props;
   const picture = pictureContainer.querySelector('picture');
+  if (picture) {
+    const pictureSrc = picture.querySelector('img').src;
+    const optimizedPicture = createOptimizedPicture(pictureSrc, '', false, [{ width: '1360' }]);
+    pictureContainer.textContent = '';
+    pictureContainer.appendChild(optimizedPicture);
+  }
   const hasShortDescr = shortDescr.textContent.trim() !== '';
   // Build DOM
   const teaserDOM = document.createRange().createContextualFragment(`
