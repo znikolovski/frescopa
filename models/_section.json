@@ -33,6 +33,22 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Numbered Features",
+              "value": "numbered"
+            },
+            {
+              "name": "Background Color",
+              "value": "background"
+            },
+            {
+              "name": "Card Tiles",
+              "value": "card-tiles"
+            },
+            {
+              "name": "Home",
+              "value": "home"
             }
           ]
         }
@@ -50,9 +66,16 @@
         "hero",
         "cards",
         "columns",
+        "teaser",
         "fragment",
+        "offer",
+        "storelocator",
         "product-recommendations",
-        "product-teaser"
+        "product-teaser",
+        "product-list-page",
+        "product-list-page-custom",
+        "product-details",
+        "video"
       ]
     }
   ]
