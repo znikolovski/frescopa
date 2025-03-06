@@ -1,6 +1,7 @@
 {
     "definitions": [
         {
+          "title": "Store Locator",
           "id": "storelocator",
           "plugins": {
             "xwalk": {

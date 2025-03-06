@@ -147,6 +147,10 @@
           {
             "name": "Home",
             "value": "home"
+          },
+          {
+            "name": "Article",
+            "value": "article"
           }
         ]
       }
