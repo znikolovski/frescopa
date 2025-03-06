@@ -1,24 +1,14 @@
-.offer-content {
+.article-content {
   border-radius: 12px;
-  padding: 50px 191px 50px 334px;
+  padding: 50px 250px 50px 250px;
   margin-bottom: 40px;
   display: flex;
   gap: 120px;
-  background: url('../../styles/backgrounds/small.svg') no-repeat center center/cover, #F4E9DC;
+  background: var(--frescopa--color-brand);
+  text-align: center;
 }
 
-.offer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
+.article-content h4,p {
 
-.offer-left h4,p {
-  margin: 0;
-}
-
-.offer-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: #fff;
 }
