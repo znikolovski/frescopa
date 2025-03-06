@@ -578,9 +578,16 @@
     "id": "video",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "video_placeholder",
+        "label": "Placeholder Image",
+        "multi": true
+      },
+      {
         "component": "aem-content",
         "valueType": "string",
-        "name": "uri",
+        "name": "video_location",
         "label": "Video"
       },
       {
@@ -600,13 +607,6 @@
             ]
           }
         ]
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "placeholder_image",
-        "label": "Placeholder Image",
-        "multi": true
       },
       {
         "component": "text",
