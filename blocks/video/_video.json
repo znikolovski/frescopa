@@ -51,13 +51,6 @@
                 ]
               }
             ]
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "placeholder_imageAlt",
-            "value": "",
-            "label": "Placeholder Image Alt Text"
           }
         ]
       }
