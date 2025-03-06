@@ -55,3 +55,7 @@ const map = document.querySelector('#locator-map');
 if (map) {
   loadScript('/blocks/store-locator/location-init.js', { defer: true });
 }
+
+
+document.dispatchEvent(new Event('delayed-phase'));
+Window.DELAYED_PHASE = true;
