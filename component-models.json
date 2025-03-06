@@ -605,6 +605,15 @@
                 "value": "autoplay"
               }
             ]
+          },
+          {
+            "name": "Inline",
+            "children": [
+              {
+                "name": "Inline",
+                "value": "inline"
+              }
+            ]
           }
         ]
       }
