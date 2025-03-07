@@ -91,7 +91,7 @@ class ProductCard extends Component {
           <a onClick=${() => this.onProductClick(product)} href="/products/${product.urlKey}/${product.sku}" dangerouslySetInnerHTML=${{__html: product.name}} />
         </div>
         <div class="description">
-          <a onClick=${() => this.onProductClick(product)} href="/products/${product.urlKey}/${product.sku}" dangerouslySetInnerHTML=${{__html: product.short_description}} />
+          <a onClick=${() => this.onProductClick(product)} href="/products/${product.urlKey}/${product.sku}" dangerouslySetInnerHTML=${{__html: product.shortDescription}} />
         </div>
         <div class="price">${renderPrice(product, this.formatter.format, html, Fragment)}</div>
       </li>`;
