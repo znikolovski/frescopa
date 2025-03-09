@@ -427,10 +427,14 @@ main > .section > div {
 }
 
 main > .section:first-of-type {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 @media (width >= 900px) {
+  main > .section:first-of-type {
+    margin-top: 70px;
+  }
+
   main > .section > div {
     padding: 0 var(--spacing-big);
   }
@@ -543,8 +547,7 @@ main > .section + .card-tiles > div {
 main > .section + .background {
   background-color: var(--frescopa--color-background);
   max-width: 1360px;
-  padding: 50px 0 2px;
-  border-radius: 12px;
+  padding: 10px 0px;
   margin-left: auto;
   margin-right: auto;
   background: url('../../styles/backgrounds/big.svg') no-repeat center center/cover;
@@ -553,4 +556,11 @@ main > .section + .background {
 main > .section + .background > div {
   max-width: 1200px;
   margin: auto;
+}
+
+@media (width >= 900px) {
+  main > .section + .background {
+    border-radius: 12px;
+    padding: 50px 0 2px;
+  }
 }

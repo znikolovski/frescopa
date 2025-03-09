@@ -425,7 +425,7 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 }
 
 .product-list-page-custom .products .list > ol > li .name a {
-  font: normal normal normal 36px/42px Baskerville;
+  font: normal normal 300 32px/42px Baskerville;
   letter-spacing: 0;
   display: inline-block;
   text-decoration: none;
@@ -437,6 +437,18 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 .product-list-page-custom .products .list > ol > li .name a:hover {
   color: var(--color-brand-700);
 }
+
+.product-list-page-custom .products .list > ol > li .description a {
+  font: normal normal 300 18px/24px Roboto;
+  max-width: 340px;
+  letter-spacing: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
 
 .product-list-page-custom .products .list > ol > li .price {
   font: var(--type-headline-2-strong-font);

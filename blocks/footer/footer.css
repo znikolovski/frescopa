@@ -13,7 +13,15 @@ footer .footer > div {
 footer .section {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
+
+@media (width >= 900px) {
+  footer .section {
+    flex-direction: row;
+  }
+}
+
 
 footer h6 {
   font-family: roboto;
