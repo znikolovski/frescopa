@@ -151,15 +151,10 @@ export class WizardLayout {
 
     const wrapper = document.createElement('div');
     wrapper.className = 'wizard-button-wrapper';
-    if (this.includePrevBtn && children.length) {
-      this.addButton(wrapper, panel, {
-        label: { value: 'Back' }, fieldType: 'button', name: 'back', id: 'wizard-button-prev',
-      }, false);
-    }
 
     if (this.includeNextBtn && children.length) {
       this.addButton(wrapper, panel, {
-        label: { value: 'Next' }, fieldType: 'button', name: 'next', id: 'wizard-button-next',
+        label: { value: 'Continue' }, fieldType: 'button', name: 'next', id: 'wizard-button-next',
       });
     }
 
@@ -168,10 +163,6 @@ export class WizardLayout {
       wrapper.append(resetBtn);
     }
 
-    const submitBtn = panel.querySelector('.submit-wrapper');
-    if (submitBtn) {
-      wrapper.append(submitBtn);
-    }
     this.assignIndexToSteps(panel);
     panel.append(wrapper);
     panel.querySelector('fieldset')?.classList.add('current-wizard-step');

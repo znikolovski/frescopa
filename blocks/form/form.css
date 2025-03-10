@@ -447,7 +447,7 @@ main .form form .wizard .wizard-button-wrapper .field-wrapper{
 }
 
 .wizard-menu-items{
-    display: flex;
+    display: none;
     gap: 50px;
     flex-wrap: wrap;
     list-style: none;
