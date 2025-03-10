@@ -86,7 +86,9 @@
         "product-list-page-custom",
         "product-details",
         "video",
-        "form"
+        "form",
+        "reward",
+        "reward-sticky"
       ]
     }
   ]
