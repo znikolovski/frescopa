@@ -11,7 +11,7 @@
 
 @media (width >= 900px) {
   .reward-content {
-    background: url('../../styles/backgrounds/reward-banner.png') no-repeat center center/cover;
+    background: url('../../styles/backgrounds/reward-banner-v1.svg') no-repeat center center/cover;
     flex-direction: row;
     justify-content: space-around;
   }
