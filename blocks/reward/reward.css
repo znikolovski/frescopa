@@ -3,7 +3,7 @@
   padding: 5px;
   margin-bottom: 40px;
   display: flex;
-
+  background: url('../../styles/backgrounds/reward-banner-v1.svg') no-repeat center center/cover;
   background-color: #F4E9DC;
   flex-direction: column;
   padding: 20px;
@@ -11,7 +11,6 @@
 
 @media (width >= 900px) {
   .reward-content {
-    background: url('../../styles/backgrounds/reward-banner-v1.svg') no-repeat center center/cover;
     flex-direction: row;
     justify-content: space-around;
   }
