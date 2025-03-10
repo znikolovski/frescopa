@@ -1,0 +1,49 @@
+.reward-content {
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 40px;
+  display: flex;
+
+  background-color: #F4E9DC;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@media (width >= 900px) {
+  .reward-content {
+    background: url('../../styles/backgrounds/reward-banner.png') no-repeat center center/cover;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+.reward-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  padding-left: 252px;
+  gap: 10px;
+  width: 50%;
+}
+
+.reward-left h4,p {
+  margin: 10px;
+}
+
+.reward-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reward-left h6{
+  font-size: 32px;
+  font: normal normal normal 32px / 32px Baskerville;
+}
+
+@media (width >= 900px) {
+  .reward-left h4,p {
+    margin: 0;
+  }
+}
