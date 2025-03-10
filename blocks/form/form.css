@@ -1,11 +1,11 @@
 :root {
     --background-color-primary: #fff;
-    --label-color: #666;
-    --border-color: #818a91;
+    --label-color: #58181D;
+    --border-color: #FFBB63;
     --form-error-color: #ff5f3f;
-    --button-primary-color: var(--frescopa--color-primary);
+    --button-primary-color: #00657d;
     --button-secondary-color: #666;
-    --button-primary-hover-color: var(--frescopa--color-primary);
+    --button-primary-hover-color: #00657d;
     --form-font-size-m: 22px;
     --form-font-size-s: 18px;
     --form-font-size-xs: 16px;
@@ -18,7 +18,7 @@
     --form-input-padding: 0.75rem 0.6rem;
     --form-input-font-size: 1rem;
     --form-input-disable-color: #ebebe4;
-    --form-input-border-size: 1px;
+    --form-input-border-size: 2px;
     --form-input-border-color: var(--border-color);
     --form-input-background-color: var(--background-color-primary);
     --form-paragraph-color: var(--label-color);
@@ -135,7 +135,7 @@ main .form select {
     max-width: unset;
     margin-top: .5rem;
     margin-bottom: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 20px;
 }
 
 main .form select {
@@ -241,7 +241,7 @@ main .form form fieldset > .checkbox-wrapper {
 
 main .form .radio-wrapper  label,
 main .form .checkbox-wrapper label {
-    flex-basis: calc(100% - 24px);
+    flex-basis: calc(100% - 34px);
 }
 
 main .form fieldset.link .checkbox-wrapper label {
@@ -665,4 +665,33 @@ main .form .field-wrapper {
 
         margin: 0;
     }
+}
+
+main .form input[type='checkbox'],
+main .form input[type='radio'] {
+    width: 24px;
+    height: 24px;
+    flex: none;
+    margin: 0;
+    position: static;
+    z-index: 1;
+    appearance: none;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main .form input[type='checkbox']:checked {
+    background-color: var(--border-color);
+    position: relative;
+}
+
+main .form input[type='checkbox']:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
