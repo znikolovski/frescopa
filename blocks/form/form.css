@@ -138,6 +138,11 @@ main .form select {
     border-radius: 20px;
 }
 
+main .form input[name='password'] {
+    -webkit-text-security: disc;
+    text-security: disc;
+}
+
 main .form select {
   padding-top: 0;
   padding-bottom: 0;
