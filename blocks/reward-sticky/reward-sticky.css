@@ -1,0 +1,28 @@
+.reward-sticky{
+  position: fixed;
+  top: 40%;
+  left: 175px;
+  z-index: 1000;
+}
+
+.reward-sticky .button.secondary{
+    background: #00647D;
+    border: none;
+    color: #FFBB63;
+    font-weight: 100;
+    padding: 16px 24px;
+    border-radius: 14px;
+}
+
+.reward-sticky .button.secondary:hover{
+  background: #00647D;
+  color: #FFBB63;
+}
+
+.reward-sticky .button.secondary::before {
+  content: url('../../styles/backgrounds/reward-icon.png') no-repeat center center/cover;;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
