@@ -483,6 +483,9 @@ loadPage();
   const exp = searchParams.get('daexperiment');
   // eslint-disable-next-line import/no-unresolved
   if (exp) import('https://da.live/nx/public/plugins/exp/exp.js');
+
+  const hasQE = new URL(window.location.href).searchParams.has('quick-edit');
+  if (hasQE) import('../tools/quick-edit/quick-edit.js').then((mod) => mod.default());
   
 // (async function loadDa() {
 //   if (!new URL(window.location.href).searchParams.get('dapreview')) return;
