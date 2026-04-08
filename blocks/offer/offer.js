@@ -14,7 +14,7 @@ export default async function decorate(block) {
 
   const url = window.location && ((window.location.origin.includes('author') || window.location.href.includes('/aem/editor/canvas')))
     ? `${aemauthorurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`
-    : `${aempublishurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`;
+    : `${aemauthorurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`;
   const options = { credentials: 'include' };
 
   const cfReq = await fetch(url, options)
