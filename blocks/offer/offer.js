@@ -15,7 +15,19 @@ export default async function decorate(block) {
   const url = window.location && ((window.location.origin.includes('author') || window.location.origin.includes('ue.da.live')))
     ? `${aemauthorurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`
     : `${aempublishurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`;
-  const options = { credentials: 'include' };
+  //const options = { credentials: 'include' };
+
+  let token;
+  try {
+    const raw = sessionStorage.getItem("adobeid_ims_access_token/exc_app/false/AdobeID,ab.manage,account_cluster.read,accounts.read,additional_info,additional_info.job_function,additional_info.projectedProductContext,additional_info.roles,adobeio.appregistry.read,adobeio_api,aem.adobe.experimental,aem.assets.author,aem.assets.delivery,aem.folders,aem.frontend.all,audiencemanager_api,creative_cloud,mps,openid,org.read,pps.read,read_organizations,read_pc,read_pc.acp,read_pc.dma_tartan,service_principals.write,session");
+    token = raw ? JSON.parse(raw)?.tokenValue : undefined;
+  } catch {
+    token = undefined;
+  }
+
+  const options = window.location && window.location.origin.includes('ue.da.live')
+    ? { 'Authorization': `Bearer ${token}` }
+    : { credentials: 'include' };
 
   const cfReq = await fetch(url, options)
     .then((response) => response.json())
