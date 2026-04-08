@@ -15,23 +15,11 @@ export default async function decorate(block) {
   const url = window.location && ((window.location.origin.includes('author') || window.location.origin.includes('ue.da.live')))
     ? `${aemauthorurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`
     : `${aempublishurl}${persistedquery};path=${offerpath};variation=${variationname};ts=${Math.random() * 1000}`;
-  //const options = { credentials: 'include' };
+  const options = { credentials: 'include' };
 
-  let token;
-  try {
-    token = document.cookie
-      ?.split("; ")
-      .find((row) => row.startsWith("auth_token="))
-      ?.split("=")
-      .slice(1)
-      .join("=") || undefined;
-  } catch {
-    token = undefined;
+  if (window.location.origin.includes('ue.da.live')) {
+   console.log('offer content fragment request', { url });
   }
-
-  const options = window.location && window.location.origin.includes('ue.da.live')
-    ? { 'Authorization': `Bearer ${token}` }
-    : { credentials: 'include' };
 
   const cfReq = await fetch(url, options)
     .then((response) => response.json())
