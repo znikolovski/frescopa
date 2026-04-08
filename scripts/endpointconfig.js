@@ -1,5 +1,6 @@
 import { getConfigValue } from './configs.js';
 
+// Endpoint configuration functions
 function getAEMPublish() {
   return getConfigValue('aem.publish');
 }
