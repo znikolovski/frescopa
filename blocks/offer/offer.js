@@ -28,6 +28,7 @@ export default async function decorate(block) {
     });
 
   const itemId = `urn:aemconnection:${offerpath}/jcr:content/data/master`;
+  console.log('offer content fragment request', { url, options, cfReq });
 
   block.innerHTML = `
   <div class='offer-content' data-aue-resource=${itemId} data-aue-label="offer content fragment" data-aue-type="reference" data-aue-filter="cf">
