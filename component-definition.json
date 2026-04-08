@@ -217,6 +217,16 @@
           "title": "Offer",
           "id": "offer",
           "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "offerpath",
+                  "selector": "div>div>p>a[href]"
+                }
+              ]
+            },
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
@@ -263,20 +273,64 @@
           "id": "teaser",
           "plugins": {
             "da": {
-              "rows": 1,
-              "columns": 2,
+              "rows": 7,
+              "columns": 1,
               "fields": [
                 {
-                  "name": "image",
-                  "selector": "div:nth-child(1)>picture>img[src]"
+                  "name": "fileReference",
+                  "selector": "div:nth-child(1)>div>picture>img[src]"
                 },
                 {
-                  "name": "imageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
+                  "name": "fileReferenceAlt",
+                  "selector": "div:nth-child(1)>div>picture>img[alt]"
                 },
                 {
-                  "name": "text",
-                  "selector": "div:nth-child(2)"
+                  "name": "classes",
+                  "selector": "div:nth-child(1)>div>ul"
+                },
+                {
+                  "name": "eyebrow",
+                  "selector": "div:nth-child(2)>div"
+                },
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(3)>div"
+                },
+                {
+                  "name": "titleType",
+                  "selector": "div:nth-child(3)>div>:first-child"
+                },
+                {
+                  "name": "longDescr",
+                  "selector": "div:nth-child(4)>div"
+                },
+                {
+                  "name": "shortDescr",
+                  "selector": "div:nth-child(5)>div"
+                },
+                {
+                  "name": "cta1Type",
+                  "selector": "div:nth-child(6)>div>p>:first-child"
+                },
+                {
+                  "name": "cta1Text",
+                  "selector": "div:nth-child(6)>div>p>strong>a"
+                },
+                {
+                  "name": "cta1",
+                  "selector": "div:nth-child(6)>div>p>strong>a[href]"
+                },
+                {
+                  "name": "cta2Type",
+                  "selector": "div:nth-child(7)>div>p>:first-child"
+                },
+                {
+                  "name": "cta2Text",
+                  "selector": "div:nth-child(7)>div>p>em>a"
+                },
+                {
+                  "name": "cta2",
+                  "selector": "div:nth-child(7)>div>p>em>a[href]"
                 }
               ]
             },

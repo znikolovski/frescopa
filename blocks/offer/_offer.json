@@ -4,6 +4,16 @@
             "title": "Offer",
             "id": "offer",
             "plugins": {
+              "da": {
+                "rows": 1,
+                "columns": 1,
+                "fields": [
+                  {
+                    "name": "offerpath",
+                    "selector": "div>div>p>a[href]"
+                  }
+                ]
+              },
               "xwalk": {
                 "page": {
                   "resourceType": "core/franklin/components/block/v1/block",
