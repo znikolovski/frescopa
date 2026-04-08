@@ -19,8 +19,12 @@ export default async function decorate(block) {
 
   let token;
   try {
-    const raw = sessionStorage.getItem("adobeid_ims_access_token/exc_app/false/AdobeID,ab.manage,account_cluster.read,accounts.read,additional_info,additional_info.job_function,additional_info.projectedProductContext,additional_info.roles,adobeio.appregistry.read,adobeio_api,aem.adobe.experimental,aem.assets.author,aem.assets.delivery,aem.folders,aem.frontend.all,audiencemanager_api,creative_cloud,mps,openid,org.read,pps.read,read_organizations,read_pc,read_pc.acp,read_pc.dma_tartan,service_principals.write,session");
-    token = raw ? JSON.parse(raw)?.tokenValue : undefined;
+    token = document.cookie
+      ?.split("; ")
+      .find((row) => row.startsWith("auth_token="))
+      ?.split("=")
+      .slice(1)
+      .join("=") || undefined;
   } catch {
     token = undefined;
   }
