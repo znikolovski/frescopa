@@ -29,7 +29,7 @@ body.dashboard .dashboard-sidebar {
   min-width: 260px;
   background-color: #f4e9dc;
 
-  padding: 32px 0;
+  padding: 0;
   overflow-y: auto;
 }
 
@@ -100,7 +100,7 @@ body.dashboard .dashboard-sidebar ul li a:hover {
 body.dashboard .dashboard-content {
   flex: 1;
   overflow: auto;
-  padding: 40px 48px;
+  padding: 0 48px;
 }
 
 /* Strip max-width constraints inside dashboard content */
@@ -109,7 +109,20 @@ body.dashboard .dashboard-content > .section {
   max-width: unset;
 }
 
-/* 5. KPI cards — scoped to body.dashboard .kpi-cards */
+body.dashboard .dashboard-greeting {
+  margin-bottom: 30px;
+}
+
+/* 5. KPI cards — section class: dashboard-kpis (also supports legacy kpi-cards block class) */
+body.dashboard .dashboard-kpis {
+  margin-bottom: 30px;
+}
+
+body.dashboard .dashboard-fleet {
+  margin-bottom: 30px;
+}
+
+body.dashboard .dashboard-kpis .cards-wrapper .cards ul,
 body.dashboard .kpi-cards > .cards-wrapper > .cards > ul {
   display: flex;
   flex-wrap: nowrap;
@@ -119,6 +132,7 @@ body.dashboard .kpi-cards > .cards-wrapper > .cards > ul {
   padding: 0;
 }
 
+body.dashboard .dashboard-kpis .cards-wrapper .cards ul li,
 body.dashboard .kpi-cards > .cards-wrapper > .cards ul li {
   flex: 1;
   margin: 0;
@@ -132,7 +146,14 @@ body.dashboard .kpi-cards > .cards-wrapper > .cards ul li {
   min-width: 0;
 }
 
+/* Remove default card body margin */
+body.dashboard .dashboard-kpis .cards-card-body,
+body.dashboard .kpi-cards .cards-card-body {
+  margin: 0;
+}
+
 /* Label (first paragraph — e.g. "REVENUE INCREASE") */
+body.dashboard .dashboard-kpis .cards-card-body > p:first-child,
 body.dashboard .kpi-cards .cards-card-body > p:first-child {
   font-size: 10px;
   font-weight: 600;
@@ -143,16 +164,21 @@ body.dashboard .kpi-cards .cards-card-body > p:first-child {
 }
 
 /* Metric value (heading — e.g. "$9.2 K") */
+body.dashboard .dashboard-kpis .cards-card-body > h2,
+body.dashboard .dashboard-kpis .cards-card-body > h3,
 body.dashboard .kpi-cards .cards-card-body > h2,
 body.dashboard .kpi-cards .cards-card-body > h3 {
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 500;
+  font-stretch: condensed;
   line-height: 1.1;
   color: var(--frescopa-color-text);
   margin: 4px 0 8px;
 }
 
 /* Trend indicator (last paragraph — e.g. "↑ 1.4K MoM") */
+body.dashboard .dashboard-kpis .cards-card-body > p:last-child,
 body.dashboard .kpi-cards .cards-card-body > p:last-child {
   display: inline-flex;
   align-items: center;
@@ -161,8 +187,248 @@ body.dashboard .kpi-cards .cards-card-body > p:last-child {
   font-weight: 500;
   color: #2e7d32;
   background-color: #e8f5e9;
-  border-radius: 99px;
-  padding: 3px 10px;
+  border-radius: 5px;
+  padding: 3px 5px;
   margin: 0;
   align-self: flex-start;
+}
+
+/* 6. Offers section */
+body.dashboard .dashboard-offers {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 30px;
+}
+
+/* Strip inner section wrappers */
+body.dashboard .dashboard-offers .section-container,
+body.dashboard .dashboard-offers > div {
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+
+  
+
+}
+
+/* Section heading */
+body.dashboard .dashboard-offers h3 {
+
+  margin: 0 0 20px;
+}
+
+/* Three-column grid of offer cards */
+body.dashboard .dashboard-offers .offer-cards > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Individual offer card */
+body.dashboard .dashboard-offers .offer-cards > div > div {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: 0px 6.86px 18.86px -1.71px #0A0A0A0A;
+  
+}
+
+/* Badge — first paragraph */
+body.dashboard .dashboard-offers .offer-cards > div > div > p:first-child {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #ddeeff;
+  color: #1a5fa8;
+  border-radius: 99px;
+  padding: 3px 12px;
+  margin: 0 0 12px;
+}
+
+/* Offer title */
+body.dashboard .dashboard-offers .offer-cards h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--frescopa-color-text);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+/* Description */
+body.dashboard .dashboard-offers .offer-cards > div > div > p:nth-child(3) {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--frescopa-color-text) 70%, transparent);
+  margin: 0 0 16px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Price line — strong is the discounted price, plain text is original */
+body.dashboard .dashboard-offers .offer-cards > div > div > p:nth-child(4) {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--frescopa-color-text) 55%, transparent);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+body.dashboard .dashboard-offers .offer-cards > div > div > p:nth-child(4) strong {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+/* Promo / savings line */
+body.dashboard .dashboard-offers .offer-cards > div > div > p:nth-child(5) {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e7d32;
+  margin: 0 0 20px;
+}
+
+/* CTA button — last paragraph with strong > a */
+body.dashboard .dashboard-offers .offer-cards > div > div > p:last-child {
+  margin: auto 0 0;
+}
+
+body.dashboard .dashboard-offers .offer-cards > div > div > p:last-child strong {
+  display: block;
+  font-weight: 600;
+}
+
+body.dashboard .dashboard-offers .offer-cards > div > div > p:last-child a {
+  display: block;
+  text-align: center;
+  background-color: #b5451b;
+  color: #fff;
+  border-radius: 99px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+body.dashboard .dashboard-offers .offer-cards > div > div > p:last-child a:hover {
+  background-color: #9a3a16;
+}
+
+/* 7. Fleet section — white card with rounded corners */
+body.dashboard .dashboard-fleet {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+}
+
+body.dashboard .dashboard-fleet > .section-container,
+body.dashboard .dashboard-fleet > div {
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+}
+
+/* Machine cards grid — 2 columns */
+body.dashboard .dashboard-fleet .machine-cards ul {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each machine card — image left, content right */
+body.dashboard .dashboard-fleet .machine-cards ul li {
+  display: flex !important;
+  flex-direction: row !important;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 8%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Image column */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-image {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body.dashboard .dashboard-fleet .machine-cards .cards-card-image picture,
+body.dashboard .dashboard-fleet .machine-cards .cards-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content column */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body {
+  flex: 1;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+}
+
+/* "Online" status badge — first paragraph */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body > p:first-child {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 500;
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 0 0 6px;
+}
+
+/* Machine name */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--frescopa-color-text);
+  margin: 0 0 2px;
+  line-height: 1.2;
+}
+
+/* Location / unit line */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body > p:nth-child(3) {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--frescopa-color-text);
+  margin: 0 0 12px;
+}
+
+/* Stats rows (CUPS TODAY / UPTIME, RATING / NEXT SERVICE) */
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body > p:nth-child(n+4) {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--frescopa-color-text) 55%, transparent);
+  margin: 4px 0 0;
+}
+
+body.dashboard .dashboard-fleet .machine-cards .cards-card-body > p:nth-child(n+4) strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--frescopa-color-text);
+  text-transform: none;
+  letter-spacing: 0;
 }
