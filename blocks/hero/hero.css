@@ -41,8 +41,17 @@ main > .section.hero-container {
 }
 
 .hero > div {
-  width: 1360px;
+  max-width: 1360px;
+  width: 100%;
   margin: auto;
+  padding: 0 var(--spacing-medium);
+  box-sizing: border-box;
+}
+
+@media (width >= 900px) {
+  .hero > div {
+    padding: 0 var(--spacing-big);
+  }
 }
 
 .hero > div > div {
@@ -137,9 +146,6 @@ main > .section.hero-container {
 
 .hero blockquote h1::after {
   content: '”';
-  position: absolute;
-  right: -0.34em;
-  bottom: 0;
 }
 
 .hero blockquote h1 {
