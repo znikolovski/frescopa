@@ -533,6 +533,34 @@ header .announcement-wrapper .default-content-wrapper {
   justify-content:space-between;
 }
 
+/* Dashboard template - full width nav, logo + links left, icons right */
+body.dashboard header nav {
+  max-width: 100%;
+  padding: 0 var(--spacing-big);
+}
+
+@media (width >= 900px) {
+  body.dashboard header nav {
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 0 var(--spacing-big);
+  }
+
+  body.dashboard header nav .nav-sections {
+    flex: 0 1 auto;
+  }
+
+  body.dashboard header nav .nav-tools {
+    margin-left: auto;
+  }
+}
+
+@media (width >= 1424px) {
+  body.dashboard header nav {
+    padding: 0 var(--spacing-big);
+  }
+}
+
 .icon-frescopa_logo {
   width: 75%;
   height: 75%;
