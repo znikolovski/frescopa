@@ -161,6 +161,14 @@ async function applyTemplates(doc) {
   if (doc.body.classList.contains('columns')) {
     buildTemplateColumns(doc);
   }
+
+  const templates = ['dashboard'];
+  const activeTemplate = templates.find((t) => doc.body.classList.contains(t));
+  if (activeTemplate) {
+    await loadCSS(`${window.hlx.codeBasePath}/templates/${activeTemplate}/${activeTemplate}.css`);
+    const mod = await import(`${window.hlx.codeBasePath}/templates/${activeTemplate}/${activeTemplate}.js`).catch(() => null);
+    if (mod?.default) await mod.default(doc);
+  }
 }
 
 /**
