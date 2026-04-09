@@ -172,7 +172,9 @@ export default async function decorate(block) {
     langRoot = `/${pathParts[0]}`;
   }
   const navMeta = getMetadata('nav');
-  let navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const isDashboard = document.body.classList.contains('dashboard');
+  const defaultNavPath = isDashboard ? '/dashboard/dashboard-nav' : '/nav';
+  let navPath = navMeta ? new URL(navMeta, window.location).pathname : defaultNavPath;
   if (langRoot && !navPath.startsWith(`${langRoot}/`)) {
     navPath = `${langRoot}${navPath}`;
   }
