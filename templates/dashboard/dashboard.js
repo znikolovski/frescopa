@@ -1,8 +1,51 @@
 import { loadFragment } from '../../blocks/fragment/fragment.js';
 
+function resolvePath(obj, path) {
+  return path.split('.').reduce((acc, key) => acc?.[key], obj);
+}
+
+function replacePlaceholders(root, data) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  let node = walker.nextNode();
+  while (node) {
+    if (node.nodeValue.includes('{{')) nodes.push(node);
+    node = walker.nextNode();
+  }
+  nodes.forEach((textNode) => {
+    textNode.nodeValue = textNode.nodeValue.replace(/\{\{([^}]+)\}\}/g, (_match, key) => {
+      if (!data) return '';
+      const value = resolvePath(data, key.trim());
+      return value !== undefined && value !== null ? value : '';
+    });
+  });
+}
+
+async function fetchCrmData(username) {
+  try {
+    const response = await fetch('https://3374739-frescopab2b.adobeioruntime.net/api/v1/web/frescopa-b2b/crm', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username }),
+    });
+    if (!response.ok) return null;
+    const data = await response.json();
+    // eslint-disable-next-line no-console
+    console.log('CRM data:', data);
+    return data;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('Failed to fetch CRM data:', error);
+    return null;
+  }
+}
+
 export default async function decorate(doc) {
   const main = doc.querySelector('main');
   if (!main) return;
+
+  const username = new URLSearchParams(window.location.search).get('username');
+  const crmDataPromise = username ? fetchCrmData(username) : Promise.resolve(null);
 
   // Build sidebar from content fragment
   const sidebar = document.createElement('aside');
@@ -21,4 +64,7 @@ export default async function decorate(doc) {
   layout.className = 'dashboard-layout';
   layout.append(sidebar, content);
   main.append(layout);
+
+  const crmData = await crmDataPromise;
+  replacePlaceholders(main, crmData);
 }
