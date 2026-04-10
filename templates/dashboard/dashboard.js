@@ -67,4 +67,5 @@ export default async function decorate(doc) {
 
   const crmData = await crmDataPromise;
   replacePlaceholders(main, crmData);
+  if (crmData?.company) document.title = `Frescopa Portal for ${crmData.company}`;
 }
