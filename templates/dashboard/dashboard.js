@@ -46,6 +46,8 @@ export default async function decorate(doc) {
 
   const username = new URLSearchParams(window.location.search).get('username');
   const crmDataPromise = username ? fetchCrmData(username) : Promise.resolve(null);
+  // Expose promise so blocks on this template can share the same fetch
+  window.frescopaData = crmDataPromise;
 
   // Build sidebar from content fragment
   const sidebar = document.createElement('aside');
