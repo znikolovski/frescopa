@@ -67,5 +67,12 @@ export default async function decorate(doc) {
 
   const crmData = await crmDataPromise;
   replacePlaceholders(main, crmData);
-  if (crmData?.company) document.title = `Frescopa Portal for ${crmData.company}`;
+  if (crmData?.company) {
+    const portalTitle = `Frescopa Portal for ${crmData.company}`;
+    document.title = portalTitle;
+    ['og:title', 'twitter:title'].forEach((property) => {
+      const meta = document.querySelector(`meta[property="${property}"], meta[name="${property}"]`);
+      if (meta) meta.setAttribute('content', portalTitle);
+    });
+  }
 }
